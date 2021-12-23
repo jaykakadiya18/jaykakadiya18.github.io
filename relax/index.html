@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>60 seconds</title>
+<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+<link rel="icon" href="images/favicon.ico" type="image/x-icon">
+<link rel="image_src" type="image/jpeg" href="images/moon.jpg" />
+<link rel="stylesheet" type="text/css" href="CSS/styles.css" />
+<script>
+        if (/Android/i.test(navigator.userAgent)) {
+          var html = document.getElementsByTagName("html")
+          html[0].style.background = '#111821'
+        }
+    </script>
+</head>
+<body>
+<div id="cover"></div>
+<!-- <img src="images/fullscreen.png" height="32" width="32" align="right" style="opacity:0.2"> -->
+<div class="message">
+<span class="insideMessage">Put a stressful thought in the star</span>
+</div>
+<div class="mainTitle title">
+<div>Relax Mind</div>
+<div class="sub-title"> A 60-second meditation tool to help clear your mind</div>
+<br>
+<div class="sub-title custom-message-username"></div>
+</div>
+<div class="mainStar">
+<div class="thought">
+<span class="thoughtText"></span>
+</div>
+</div>
+<input placeholder="What's bothering you?..." class="typeHere" style="position:fixed;"></input>
+
+<a href="#" class="button submit btn-enterthought" onclick="openFullscreen();" style="position:fixed;"><span>Done</span>
+</a>
+<script>
+/* Get the documentElement (<html>) to display the page in fullscreen */
+var elem = document.documentElement;
+
+/* View in fullscreen */
+function openFullscreen() {
+  if (elem.requestFullscreen) {
+    elem.requestFullscreen();
+  } else if (elem.webkitRequestFullscreen) { /* Safari */
+    elem.webkitRequestFullscreen();
+  } else if (elem.msRequestFullscreen) { /* IE11 */
+    elem.msRequestFullscreen();
+  }
+}
+
+/* Close fullscreen */
+function closeFullscreen() {
+  if (document.exitFullscreen) {
+    document.exitFullscreen();
+  } else if (document.webkitExitFullscreen) { /* Safari */
+    document.webkitExitFullscreen();
+  } else if (document.msExitFullscreen) { /* IE11 */
+    document.msExitFullscreen();
+  }
+}
+</script>
+
+
+
+<div class="overlay">
+<div class="title done title-done">
+Hope you feel a little less stressed
+<br>and a little more connected
+<br><h5>Press the "Esc" key on your keyboard to close the FullScreen.</h5>
+</div>
+
+<div class="content-wrapper">
+
+
+<div class="subscribe-wrapper">
+<div class="done2 with-love" style="padding-top:20px">Made with <span class="heart">&#9829;</span> by Jay Kakadiya</div>
+</div>
+</div>
+</div>
+<audio class="audio" autoplay>
+<source src="media/background.mp3" type="audio/mp3">
+</audio>
+</div>
+
+<script src='JS/jquery-1.11.2.min.js'></script>
+<script src='JS/jquery.textfill.min.js'></script>
+<script src='JS/html2canvas.js'></script>
+<script src="JS/d3.js" charset="utf-8"></script>
+<script src='JS/d3methods.js'></script>
+<script src='JS/jqueryMethods.js'></script>
+
+</body>
+
+</html>
